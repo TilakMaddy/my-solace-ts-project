@@ -8,7 +8,7 @@ contract CounterTest is Test {
     Counter internal counter;
 
     function setUp() public {
-        counter = new Counter();
+        counter = new Counter(address(0xdead));
     }
 
     function test_IncrementsByOne() public {

@@ -3,8 +3,13 @@ pragma solidity 0.8.24;
 
 contract Counter {
     uint256 public count;
+    address public immutable oracle;
 
     event Incremented(uint256 newCount);
+
+    constructor(address oracle_) {
+        oracle = oracle_;
+    }
 
     function increment() external {
         unchecked {
