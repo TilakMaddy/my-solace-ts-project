@@ -1,0 +1,30 @@
+{
+  "name": "my-solace-ts-project",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test:hardhat": "hardhat test",
+    "test:forge": "forge test -vvv",
+    "deploy:counter": "hardhat run deploy/01_deploy_counter.ts --network hardhat",
+    "deploy:counter-upgradeable": "hardhat run deploy/02_deploy_counter_upgradeable.ts --network hardhat",
+    "ignition:counter": "hardhat ignition deploy ignition/modules/Counter.ts --network hardhat",
+    "ignition:counter-upgradeable": "hardhat ignition deploy ignition/modules/CounterUpgradeable.ts --network hardhat"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ignition": "^3.0.0",
+    "@nomicfoundation/hardhat-ignition-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-keystore": "^3.0.0",
+    "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^3.0.0",
+    "@types/node": "^22.0.0",
+    "ethers": "^6.13.0",
+    "hardhat": "^3.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.1.0",
+    "@openzeppelin/contracts-upgradeable": "^5.1.0"
+  }
+}
